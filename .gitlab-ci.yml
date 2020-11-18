@@ -5,4 +5,4 @@ include:
 
 variables:
     DOCKER_REG: "docker-device-insights.artifactory.pan.local"
-    IMAGE_TAG: TESTTEST
+    IMAGE_TAG: "${CI_COMMIT_REF_NAME}"
