@@ -1,0 +1,10 @@
+include:
+  - project: engineering-productivity/ci-templates
+    ref: master
+    file: output/docker/auto-artifactory.yaml
+
+variables:
+    DOCKER_REG: "docker-device-insights.artifactory.pan.local"
+
+before_script:
+  - export IMAGE_TAG = $(git describe --tags --dirty)
